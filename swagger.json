@@ -1,0 +1,259 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Donut API",
+    "description": "Online REST API for 🍩",
+    "version": "0.0.1"
+  },
+  "paths": {
+    "/donuts": {
+      "get": {
+        "description": "Lists all donuts",
+        "responses": {
+          "200": {
+            "description": "Successfully fetched all donuts",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "number"
+                      },
+                      "flavor": {
+                        "type": "string"
+                      },
+                      "price": {
+                        "type": "string"
+                      },
+                      "calories": {
+                        "type": "string"
+                      }
+                    },
+                    "example": {
+                      "id": "dje8d",
+                      "flavor": "glazed",
+                      "price": "2.99",
+                      "calories": "220"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Adds a donut to the database",
+        "parameters": [
+          {
+            "name": "flavor",
+            "in": "body",
+            "description": "Flavor of donut",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "price",
+            "in": "body",
+            "description": "Price of donut",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "calories",
+            "in": "body",
+            "description": "Calories in donut",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully fetched all donuts",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "number"
+                      },
+                      "flavor": {
+                        "type": "string"
+                      },
+                      "price": {
+                        "type": "string"
+                      },
+                      "calories": {
+                        "type": "string"
+                      }
+                    },
+                    "example": {
+                      "id": "dje8d",
+                      "flavor": "glazed",
+                      "price": "2.99",
+                      "calories": "220"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/donuts/{id}": {
+      "get": {
+        "description": "Lists a single donuts",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of donut to be retrieved",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully fetched a donuta",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "number"
+                    },
+                    "flavor": {
+                      "type": "string"
+                    },
+                    "price": {
+                      "type": "string"
+                    },
+                    "calories": {
+                      "type": "string"
+                    }
+                  },
+                  "example": {
+                    "id": "dje8d",
+                    "flavor": "glazed",
+                    "price": "2.99",
+                    "calories": "220"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "Updates a single donuts",
+        "parameters": [
+          {
+            "name": "flavor",
+            "in": "body",
+            "description": "Flavor of donut",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "price",
+            "in": "body",
+            "description": "Price of donut",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "calories",
+            "in": "body",
+            "description": "Calories in donut",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully updated a donuta",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "number"
+                    },
+                    "flavor": {
+                      "type": "string"
+                    },
+                    "price": {
+                      "type": "string"
+                    },
+                    "calories": {
+                      "type": "string"
+                    }
+                  },
+                  "example": {
+                    "id": "dje8d",
+                    "flavor": "glazed",
+                    "price": "2.99",
+                    "calories": "220"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "Deletes a single donuts",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of donut to be retrieved",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully deleted a donuta",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "number"
+                    },
+                    "flavor": {
+                      "type": "string"
+                    },
+                    "price": {
+                      "type": "string"
+                    },
+                    "calories": {
+                      "type": "string"
+                    }
+                  },
+                  "example": {
+                    "id": "dje8d",
+                    "flavor": "glazed",
+                    "price": "2.99",
+                    "calories": "220"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

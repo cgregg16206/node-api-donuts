@@ -1,0 +1,16 @@
+{
+  "donuts": [
+    {
+      "id": "dje8d",
+      "flavor": "glazed",
+      "price": "2.99",
+      "calories": "220"
+    },
+    {
+      "id": "NejEX",
+      "flavor": "powder",
+      "price": "1.50",
+      "calories": "210"
+    }
+  ]
+}
